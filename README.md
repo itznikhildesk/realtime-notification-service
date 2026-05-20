@@ -1,2 +1,2 @@
-# springboot-realtime-microservices
-Personal project for learning real-time microservices architecture using Spring Boot, Apache Kafka, event-driven communication, and scalable backend systems.
+# realtime-notification-service
+Event-driven notification microservice built with Spring Boot, Apache Kafka, and real-time messaging architecture.
