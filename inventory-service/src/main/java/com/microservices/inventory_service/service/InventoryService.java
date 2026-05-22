@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Slf4j
@@ -27,6 +28,9 @@ public class InventoryService {
         return inventory;
     }
 
+    public List<Inventory> getAllInventory(){
+        return inventoryRepository.findAll();
+    }
 
     public boolean isStockAvailable(String skuCode, int quantity){
         return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity);

@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/inventory")
@@ -22,5 +24,10 @@ public class InventoryController {
     @GetMapping
     ResponseEntity<Boolean> existInInventory(@RequestParam String skuCode, @RequestParam int quantity){
         return ResponseEntity.ok(inventoryService.isStockAvailable(skuCode, quantity));
+    }
+
+    @GetMapping("fetch-all")
+    ResponseEntity<List<Inventory>> getAllInventory(){
+        return ResponseEntity.ok(inventoryService.getAllInventory());
     }
 }

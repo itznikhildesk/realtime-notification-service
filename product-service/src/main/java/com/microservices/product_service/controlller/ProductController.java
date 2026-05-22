@@ -2,7 +2,6 @@ package com.microservices.product_service.controlller;
 
 import com.microservices.product_service.dto.ProductRequest;
 import com.microservices.product_service.dto.ProductResponse;
-import com.microservices.product_service.model.Product;
 import com.microservices.product_service.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
